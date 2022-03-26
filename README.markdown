@@ -1,5 +1,3 @@
 # Overlay menu
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/ig_design/pen/VgaXaY](https://codepen.io/ig_design/pen/VgaXaY).
-
-
+This portfolio is make with HMTL, SCSS , and JavaScript.
