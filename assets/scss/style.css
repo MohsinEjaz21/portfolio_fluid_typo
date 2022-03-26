@@ -15,7 +15,6 @@
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 10;
   transform: translateY(-50%);
   width: 100%;
   transition: all 500ms linear;
