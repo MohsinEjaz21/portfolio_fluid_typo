@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Portfolio with nav</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/scss/global.css">
+  <link rel="stylesheet" href="../assets/scss/style.css">
+  <link rel="stylesheet" href="../assets/scss/fluid-typography.css">
+  <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
+  <!-- <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" /> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="logo-wrap">
+        <a href="#" class="hover-target">
+          <lottie-player id="lottie-logo" src="https://assets10.lottiefiles.com/packages/lf20_fvbrupnk.json"
+            background="transparent" speed="1" autoplay></lottie-player>
+          <!-- <span>M</span>EJAZ -->
+        </a>
+      </div>
+      <div class="menu-wrap">
+        <div class="menu-icon hover-target">
+          <span class="menu-icon__line menu-icon__line-left"></span>
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav">
+    <div class="nav__content">
+      <ul class="nav__list">
+        <li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li>
+        <li class="nav__list-item"><a href="#" class="hover-target">About</a></li>
+        <li class="nav__list-item"><a href="#" class="hover-target">news</a></li>
+        <li class="nav__list-item"><a href="#" class="hover-target">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="section_01">
+    <div id="particles-js" style="height: 100%"></div>
+    <div class="content">
+      <div class="subsection_01">
+        <h4 class="title hover-target"> Web developer</h4>
+        <img src="../assets/logo.png" alt="" />
+      </div>
+      <div class="subsection_02">
+        <h2 class="title hover-target">Software Engineer</h2>
+      </div>
+    </div>
+  </div>
+  <div id="section_02">
+    <div class="grid">
+      <div class="grid_child_01">
+        <h1 class="title">About</h1>
+      </div>
+      <div class="grid_child_02">
+        <div class="title">
+          <h4>Hi, Wellcome </h4>
+        </div>
+        <br>
+        <div class="description">
+          <p>
+            I'm a self-taught programmer and I'm always looking for new challenges to learn and grow. I'm always open
+            to
+            new ideas and challenges. I have 3 year of experience as working as a full stack web developer.
+          </p>
+          <p>
+            I have contributed to many open source projects. i also worked
+            with top notch companies as web developer. Looking forward to provide solutions for your web design and
+            development problems.
+          </p>
+        </div>
+        <div class="contact">
+          <p>+92-321-6629462</p>
+          <p>mejaz.bese21@gmail.com</p>
+        </div>
+      </div>
+      <div class="grid_child_03">
+        <lottie-player src="../assets/lottie-person.json" background="transparent" speed="1" loop autoplay>
+        </lottie-player>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="section03" class="section">
+  </div> -->
+
+  <div id="rotatedAnimatedText" style="display: none;">
+    <div class="section-text-center">
+      <div id="container-c">
+        <div id="circle">
+          <svg id="rotateSvg" version=1.1 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink
+            x=0px y=0px width=300px height=300px viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+            xml:space=preserve>
+            <defs>
+              <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+            </defs>
+            <circle cx="150" cy="100" r="75" fill="none" />
+            <g>
+              <use xlink:href=#circlePath fill=none />
+              <text>
+                <textPath xlink:href=#circlePath>Let's build awesome together! •</textPath>
+              </text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor2" id="cursor2"></div>
+  <div class="cursor3" id="cursor3"></div>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./particle.js"></script>
+  <script src="./common.js"></script>
+  <script>
+    window.onscroll = function () { scrollRotate() };
+    function scrollRotate() {
+      var navimg = document.getElementById("rotateSvg");
+      navimg.style.transform = "rotate(" + (window.pageYOffset / 5) + "deg)";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+<!-- https://assets10.lottiefiles.com/private_files/lf30_WdTEui.json -->
+<!-- https://assets10.lottiefiles.com/packages/lf20_eaH9qj.json -->
+<!-- https://assets8.lottiefiles.com/packages/lf20_sczlolnp.json -->
+<!-- https://assets10.lottiefiles.com/private_files/lf30_xeb8piyr.json -->
+<!-- https://assets9.lottiefiles.com/packages/lf20_rkyfvrzn.json -->
+<!-- https://assets9.lottiefiles.com/packages/lf20_gljfnvqz.json -->
+<!-- https://assets5.lottiefiles.com/packages/lf20_iomkzwwh.json -->
+
+
+
+<!-- stats - count particles -->
+<!-- <div class="count-particles">
+      <span class="js-count-particles">--</span> particles
+    </div> -->
+<!-- shadow-title parallax-top-shadow title-left -->
+<!-- <div class="section-parallax parallax-00 mouse"
+      style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-0.png');"></div>
+    <div class="section-parallax parallax-01 mouse"
+      style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-01.png');"></div> -->
+<!-- <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_6niurjte.json" background="transparent"
+            speed="1" id="hand-lottie" loop autoplay></lottie-player> -->
+<!-- <lottie-player id="lottie-logo-ripple" src="https://assets7.lottiefiles.com/packages/lf20_vy7sqapr.json"
+      background="transparent" speed="1" loop autoplay></lottie-player> -->
+<!-- <lottie-player id="lottie-stars" src="https://assets8.lottiefiles.com/packages/lf20_sczlolnp.json"
+      background="transparent" speed="1" loop autoplay></lottie-player> -->
+<!-- 
+      <lottie-player id="lottie-stars" src="https://assets10.lottiefiles.com/private_files/lf30_fngabhfr.json"
+      background="transparent" speed="1" loop autoplay></lottie-player> -->
+
+<!-- <script>
+    LottieInteractivity.create({
+      player: '#hand-lottie',
+      mode: "scroll",
+      actions: [
+        {
+          visibility: [0, 1.0],
+          type: "seek",
+          frames: [0, 300],
+        },
+      ]
+    });
+  </script> -->
+
+<!-- <div class="deliverables">
+            <h3>Blazing Fast </h3>
+            <h3>Game Changer</h3>
+            <h3>Creative</h3>
+            <h3>Innovative</h3>
+            <h3>Fast</h3>
+            <h3>Reliable</h3>
+            <h3>Secure</h3>
+            <h3>Robust</h3>
+            <h3>Stable</h3>
+            <h3>Stunning</h3>
+            <h3>Trustworthy</h3>
+          </div> -->

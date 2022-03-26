@@ -1,0 +1,56 @@
+// upto
+// above
+// only
+
+// @mixin media($size) {
+//   @if $size == phone-only {
+//     @media (max-width: 599px) {
+//       @content;
+//     }
+//   } @else if $size == tablet-portrait-up {
+//     @media (min-width: 600px) {
+//       @content;
+//     }
+//   } @else if $size == tablet-only {
+//     @media (max-width: 799px) {
+//       @content;
+//     }
+//   } @else if $size == tablet-landscape-up {
+//     @media (min-width: 900px) {
+//       @content;
+//     }
+//   } @else if $size == laptops-small-only {
+//     @media (max-width: 1024px) {
+//       @content;
+//     }
+//   } @else if $size == desktop-up {
+//     @media (min-width: 1200px) {
+//       @content;
+//     }
+//   } @else if $size == big-desktop-up {
+//     @media (min-width: 1800px) {
+//       @content;
+//     }
+//   }
+// }
+
+$sm: 544px;
+$md: 768px;
+$lg: 1012px;
+$xl: 1280px;
+
+@mixin media($min: 0, $max: 0) {
+  @if ($min != 0 and $max == 0) {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if ($min == 0 and $max != 0) {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else if ($min != 0 and $max != 0) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}

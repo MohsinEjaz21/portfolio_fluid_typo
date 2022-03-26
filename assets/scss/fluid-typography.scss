@@ -1,0 +1,145 @@
+// @import 'https://fonts.googleapis.com/css?family=Suez+One';
+@use "sass:math";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$base-spacing-unit: 24px;
+$base-font-size: 16px;
+
+$break-start: ($base-spacing-unit * 15);
+$break-end: ($base-spacing-unit * 45);
+$break-stop: $break-end - 1px;
+
+@function strip-unit($number) {
+  @return $number;
+}
+
+@function px-to-rem($number) {
+  @return math.div($number, $base-font-size) * 1rem;
+}
+
+@mixin responsive-typography($min-font-size, $max-font-size, $line-height: true) {
+  $small-em: px-to-rem($min-font-size);
+  $large-em: px-to-rem($max-font-size);
+
+  $min-line-height: $min-font-size * 1.4;
+  $max-line-height: $max-font-size * 2;
+
+  // Calculate M (how many pixels do we add to the font size for each increase of 1px to the viewport width)
+  $m-font: math.div(
+    strip-unit($max-font-size) - strip-unit($min-font-size),
+    strip-unit($break-stop) - strip-unit($break-start)
+  );
+  $m-line: math.div($max-line-height - $min-line-height, $break-stop - $break-start);
+
+  // Calculate B (font-size before we add any viewport-based value)
+  $b-font: unquote("#{$min-font-size} - #{$m-font} * #{$break-start}");
+  $b-line: unquote("#{$min-line-height} - #{$m-line} * #{$break-start}");
+
+  // Calculate N (convert to vw)
+  $n-font: #{$m-font * 100vw};
+  $n-line: #{$m-line * 100vw};
+
+  font-size: #{$min-font-size};
+  font-size: #{$small-em};
+
+  @if $line-height == true {
+    line-height: px-to-rem($min-line-height);
+  }
+
+  @media (min-width: #{$break-start}) {
+    font-size: #{($min-font-size + $max-font-size) * 0.5};
+    font-size: calc(#{$n-font} + #{$b-font});
+
+    @if $line-height == true {
+      line-height: #{($min-line-height + $max-line-height) * 0.5};
+      line-height: calc(#{$n-line} + #{$b-line});
+    }
+  }
+
+  @media (min-width: $break-end) {
+    font-size: #{$max-font-size};
+    font-size: #{$large-em};
+
+    @if $line-height == true {
+      line-height: px-to-rem($max-line-height);
+    }
+  }
+}
+
+body {
+  @include responsive-typography(20px, 24px);
+  // padding: $base-spacing-unit * 2;
+}
+
+.maxcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", serif;
+  font-weight: normal;
+}
+
+h1 {
+  @include responsive-typography(48px, 64px);
+  margin: 0 0 $base-spacing-unit;
+
+  // small {
+  //   @include responsive-typography(16px, 24px);
+  // }
+}
+
+h2 {
+  @include responsive-typography(25px, 48px, true);
+  line-height: 1.4;
+  margin: 0 0 $base-spacing-unit;
+}
+
+h3 {
+  @include responsive-typography(30px, 36px);
+  margin: 0;
+}
+
+h4 {
+  @include responsive-typography(20px, 30px);
+  margin: 0;
+}
+
+h5 {
+  @include responsive-typography(20px, 25px);
+  margin: 0;
+}
+
+h6 {
+  @include responsive-typography(18px, 20px);
+  margin: 0;
+}
+p {
+  margin-bottom: $base-spacing-unit;
+}
+
+pre {
+  text-align: left;
+  margin: $base-spacing-unit 0 ($base-spacing-unit * 2);
+  padding: ($base-spacing-unit * 2) ($base-spacing-unit * 2) ($base-spacing-unit * 2) $base-spacing-unit;
+  background: #454545;
+  color: white;
+  display: inline-block;
+  width: 100%;
+}
+
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

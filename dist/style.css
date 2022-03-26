@@ -1,0 +1,136 @@
+#section_01 {
+  height: 100vh;
+}
+#section_01 #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#section_01 .content {
+  display: grid;
+  grid-row-gap: 15px;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: all 500ms linear;
+  margin: 0 auto;
+  text-align: center;
+}
+#section_01 .content .subsection_01 {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-auto-flow: column;
+}
+#section_01 .content .subsection_01 .title {
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+#section_01 .content .subsection_01 img {
+  height: 45px;
+}
+@media (max-width: 599px) {
+  #section_01 .content .subsection_01 img {
+    display: none;
+  }
+}
+#section_01 .content .subsection_02 .title {
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color__4);
+  text-transform: uppercase;
+  transition: all 300ms linear;
+}
+
+#section_02 {
+  background: #22273c;
+  transition: all 300ms linear;
+}
+#section_02 .grid {
+  grid-template-columns: 160px 0.7fr 0.3fr;
+}
+#section_02 .grid_child_01 > .title {
+  margin: 0;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--color__19);
+  background-clip: text;
+  background: linear-gradient(90deg, var(--color__12), var(--color__13));
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -webkit-background-clip: text;
+}
+
+@media (max-width: 1024px) {
+  #section_02 .grid {
+    grid-template-columns: 0.1fr 0.9fr;
+  }
+  #section_02 .grid_child_03 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #section_02 .grid {
+    grid-template-columns: auto;
+    grid-template-rows: 0.1fr 0.8fr;
+    grid-row-gap: 20px;
+  }
+  #section_02 .grid_child_01 > .title {
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+  }
+}
+[id*=section] {
+  position: relative;
+  padding: 60px 20px;
+}
+
+.grid {
+  display: grid;
+}
+
+.gradient_animated_text {
+  background: linear-gradient(86deg, #28498f, #39b5a4, #147a65, #7982c4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 360% 360%;
+  -webkit-animation: gradient-animation 12s ease infinite;
+          animation: gradient-animation 12s ease infinite;
+}
+
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* 01# Gradient *//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+@media (min-width: 360px) {
+  body {
+    font-size: 22px;
+    font-size: calc(0.5563282337vw + 20px - 0.0055632823 * 360px);
+    line-height: 38px;
+    line-height: calc(2.7816411683vw + 28px - 0.0278164117 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  body {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}
+
+.maxcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 4.2rem;
+  margin: 0 0 24px;
+}
+@media (min-width: 360px) {
+  h1 {
+    font-size: 56px;
+    font-size: calc(2.2253129346vw + 48px - 0.0222531293 * 360px);
+    line-height: 97.6px;
+    line-height: calc(8.4561891516vw + 67.2px - 0.0845618915 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  h1 {
+    font-size: 64px;
+    font-size: 4rem;
+    line-height: 8rem;
+  }
+}
+
+h2 {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 2.1875rem;
+  line-height: 1.4;
+  margin: 0 0 24px;
+}
+@media (min-width: 360px) {
+  h2 {
+    font-size: 36.5px;
+    font-size: calc(3.1988873435vw + 25px - 0.0319888734 * 360px);
+    line-height: 65.5px;
+    line-height: calc(8.4840055633vw + 35px - 0.0848400556 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  h2 {
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 2.625rem;
+  margin: 0;
+}
+@media (min-width: 360px) {
+  h3 {
+    font-size: 33px;
+    font-size: calc(0.8344923505vw + 30px - 0.0083449235 * 360px);
+    line-height: 57px;
+    line-height: calc(4.1724617524vw + 42px - 0.0417246175 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  h3 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 4.5rem;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0;
+}
+@media (min-width: 360px) {
+  h4 {
+    font-size: 25px;
+    font-size: calc(1.3908205841vw + 20px - 0.0139082058 * 360px);
+    line-height: 44px;
+    line-height: calc(4.4506258693vw + 28px - 0.0445062587 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  h4 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 3.75rem;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0;
+}
+@media (min-width: 360px) {
+  h5 {
+    font-size: 22.5px;
+    font-size: calc(0.6954102921vw + 20px - 0.0069541029 * 360px);
+    line-height: 39px;
+    line-height: calc(3.0598052851vw + 28px - 0.0305980529 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  h5 {
+    font-size: 25px;
+    font-size: 1.5625rem;
+    line-height: 3.125rem;
+  }
+}
+
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.575rem;
+  margin: 0;
+}
+@media (min-width: 360px) {
+  h6 {
+    font-size: 19px;
+    font-size: calc(0.2781641168vw + 18px - 0.0027816412 * 360px);
+    line-height: 32.6px;
+    line-height: calc(2.0584144645vw + 25.2px - 0.0205841446 * 360px);
+  }
+}
+@media (min-width: 1080px) {
+  h6 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+pre {
+  text-align: left;
+  margin: 24px 0 48px;
+  padding: 48px 48px 48px 24px;
+  background: #454545;
+  color: white;
+  display: inline-block;
+  width: 100%;
+}
+
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}/*# sourceMappingURL=fluid-typography.css.map */

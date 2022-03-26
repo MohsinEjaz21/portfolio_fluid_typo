@@ -1,0 +1,58 @@
+// * {
+//   word-wrap: break-word;
+//   word-break: break-all;
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// p{
+//   overflow-wrap: break-word; 
+
+// }
+
+// html {
+//   font-size: 62.5%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// :root {
+//   --heading-large: 6.4rem;
+//   --heading-medium: 4.8rem;
+//   --heading-regular: 4rem;
+//   --heading-small: 3.3rem;
+//   --heading-tiny: 2.6rem;
+//   --pargraph: 2.4rem;
+//   --btn: 2rem;
+
+//   --line-height-01: 1.2;
+//   --line-height-02: 1.4;
+//   --line-height-03: 1.6;
+//   --line-height-04: 1.8;
+//   --line-height-05: 2;
+
+//   @include media(phone-only) {
+//     --pargraph: 2.5rem;
+//   }
+// }
+
+// h1 {
+//   font-size: var(--heading-large);
+// }
+// h2 {
+//   font-size: var(--heading-medium);
+// }
+// h3 {
+//   font-size: var(--heading-regular);
+// }
+// h4 {
+//   font-size: var(--heading-small);
+// }
+// p {
+//   font-size: var(--pargraph);
+//   line-height: var(--line-height-04);
+// }
+// button {
+//   font-size: var(--btn);
+// }
